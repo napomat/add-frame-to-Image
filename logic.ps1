@@ -4,6 +4,7 @@ $imgmagic = $scriptDir+"\ImageMagick-7.0.10-53\"
 
 ################Variables################
 $Bordersize = 20
+$Bordercolor = "#eae4dd"
 ########
 
 
@@ -55,11 +56,11 @@ foreach($File in $Files){
 
   if ($ratiosplit[0] -lt $ratiosplit[1]){
     . $imgmagic\magick.exe convert $File.FullName -gravity center -crop 2:3  $Folder\with_border\temp.jpg
-    . $imgmagic\magick.exe convert $Folder\with_border\temp.jpg -shave $Bordersize -bordercolor white -border $Bordersize $Folder\with_border\$outname
+    . $imgmagic\magick.exe convert $Folder\with_border\temp.jpg -shave $Bordersize -bordercolor $Bordercolor -border $Bordersize $Folder\with_border\$outname
   }
   else{
     . $imgmagic\magick.exe convert $File.FullName -gravity center -crop 3:2 $Folder\with_border\temp.jpg
-    . $imgmagic\magick.exe convert $Folder\with_border\temp.jpg -shave $Bordersize -bordercolor white -border $Bordersize  $Folder\with_border\$outname
+    . $imgmagic\magick.exe convert $Folder\with_border\temp.jpg -shave $Bordersize -bordercolor $Bordercolor -border $Bordersize  $Folder\with_border\$outname
   }
 
   remove-item $Folder\with_border\temp.jpg
