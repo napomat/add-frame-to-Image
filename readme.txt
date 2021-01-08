@@ -8,36 +8,10 @@ Die Dicke des Rahmens müsst ihr selbst herrausfinden. Um das irgendwie auszurec
 
 Die Rahmendicke könnt ihr in der "logic.ps1" Datei anpassen. 
 
-Die verschiedenen Optionen für die Seitenverhältnisse können einzeln geändert werden.
-Aktuell gibt es diese vier Stück zur Auswahl.
-Beim aufrufen der Start.Bat wird nach dem Seitenverhältniss gefragt, danach wird der Ordner mit den Bildern gewählt.
-
-
 ################Variables################
-$Bordercolor = "#eae4dd"
+$Bordersize = 20
+########
 
-
-switch ( $aspectratioselect ){
-  0 { # 7x5,5
-    $BordersizeA = "97x77.6"
-    $BordersizeB = "77.6x97"
-    $aspectratioA = "1:0.78"
-    $aspectratioB = "0.78:1"  }
-  1 { #7x9,5
-    $BordersizeA = "97x71,78"
-    $BordersizeB = "71,78x97"
-    $aspectratioA = "1:0,74"
-    $aspectratioB = "0,74:1"  }
-  2 { # 7x7
-    $BordersizeA = "97x97"
-    $BordersizeB = "97x97"
-    $aspectratioA = "1:1"
-    $aspectratioB = "1:1"  }
-  3 { # 9,5x14,5
-    $BordersizeA = "97x63.05"
-    $BordersizeB = "63.05x97"
-    $aspectratioA = "0.65:1"
-    $aspectratioB = "1:0.65" }
-}
-
+Nur die Zahl hinter dem = ändern. 
+Aktuell sind es 20px.
 
